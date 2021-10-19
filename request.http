@@ -1,0 +1,52 @@
+###
+
+GET http://localhost:5000/blogs/all
+
+
+
+###
+GET http://localhost:5000/blogs/byid/
+
+
+###
+GET http://localhost:5000/blogs/byslug/
+
+
+###
+POST http://localhost:5000/blogs/create
+Content-Type: application/json
+
+{
+    "title": "My Second blog",
+    "content": "lorem ipsum dolo sit amet",
+    "slug": "my-second-blog"
+}
+
+
+###
+POST http://localhost:5000/blogs/editbyid
+Content-Type: application/json
+
+{
+    "_id": "616d54890ca5550aee5bf35a",
+    "slug": "first-blog"
+}
+
+
+###
+POST http://localhost:5000/blogs/deletebyid
+Content-Type: application/json
+
+{
+    "_id": "616db6ba6ab64bd144b10188"
+}
+
+
+
+###
+POST http://localhost:5000/blogs/deletebyslug
+Content-Type: application/json
+
+{
+    "slug": "my-first-blog"
+}
